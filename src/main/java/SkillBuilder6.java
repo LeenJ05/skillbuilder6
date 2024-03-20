@@ -21,9 +21,11 @@ public class SkillBuilder6 {
             char c = s.charAt(i);
             if (c == START_CHAR || c == Character.toUpperCase(START_CHAR)) {
                 beginIndex = i;
-            } else if (( c == END_CHAR || c ==  Character.toUpperCase(END_CHAR)) && beginIndex!=-1){
-                    endIndex = i;
-                    return s.substring(beginIndex, endIndex + 1);
+            } else if (( c == END_CHAR || c ==  Character.toUpperCase(END_CHAR)) && beginIndex!=-1) {
+                endIndex = i;
+                return s.substring(beginIndex, endIndex + 1);
+            } else {
+                beginIndex = -1;
                 }
             }
 
